@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  /* margin: 0 10px 0 10px; */
+  --background-color: white;
+  --text-color: black;
+  --element-color: white;
+  margin: 0;
+  font-family: Nunito, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body.dark {
+  --background-color: hsl(209, 23%, 17%);
+  --text-color: white;
+  --element-color: hsl(209, 23%, 17%);
+}
+.title {
+  font-weight: 800;
+}
+.title a {
+  color: var(--text-color);
+}
+.header {
+  box-shadow: 0 2px 4px 4px rgb(244, 240, 240);
+}
+.header-content {
+  background-color: var(--element-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-inline: 24px;
+  /* background-color: pink; */
+}
+.countires-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+.country-card {
+  display: inline-block;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 4px rgb(244, 240, 240);
+  padding-bottom: 18px;
+  margin-top: 16px;
+  background-color: var(--element-color);
+  background-color: inherit;
+  color: var(--text-color);
+}
+.country-card:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.country-card img {
+  width: 100%;
+}
+.card-text {
+  padding-inline: 16px;
+}
+.card-title {
+  font-size: 24px;
+  margin-block: 16px;
+}
+.card-text p {
+  margin-block: 8px;
+}
+main {
+  padding: 24px;
+}
+a {
+  text-decoration-line: none;
+  color: black;
+}
+.search-filter-container {
+  margin-top: 16px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+}
+.search-container {
+  box-shadow: 0 2px 4px 4px rgb(244, 240, 240);
+  width: 600px;
+  border-radius: 4px;
+  padding-left: 24px;
+  margin: 0 40px;
+  color: rgb(173, 168, 168);
+  overflow: hidden;
+}
+.search-container input {
+  outline: none;
+  border: none;
+  padding: 16px;
+  padding-top: 25px;
+  width: 80%;
+  flex-grow: 1;
+  background-color: inherit;
+  color: var(--text-color);
+}
+.search-container input::placeholder {
+  color: rgb(173, 168, 168);
+}
+.filterbyregion {
+  width: 200px;
+  padding: 24px;
+  margin-right: 28px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px 4px rgb(244, 240, 240);
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.filterbyregion option {
+  color: var(--text-color);
+  background: var(--element-color);
+}
+.theme-changer {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+@media (max-width: 768px) {
+  .countires-container {
+    justify-content: center;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .header-content p {
+    font-size: 12px;
+  }
+  .search-filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container {
+    width: 250px;
+  }
+  .filterbyregion {
+    width: 250px;
+    margin: 0 40px;
+    margin-top: 20px;
+    height: 50px;
+    padding: unset;
+    padding-left: 20px;
+  }
+  .title a {
+    font-size: 20px;
+  }
+}
